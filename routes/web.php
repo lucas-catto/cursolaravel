@@ -43,3 +43,29 @@ Match:
 Route::match(['get', 'post'], '/match', function () {
     return "match: it's accepted just the defined HTTP verbs.";
 });
+
+/*
+Passing parameters through the URL:
+*/
+
+// Not optional parameter:
+// Route::get('/produto/{id}/{category}', function (int $id, string $category) {
+//     return 
+//         "Id: "       . $id
+//         ."<br>".
+//         "Category: " . $category;
+// });
+
+// Optional parameter:
+Route::get('/produto/{id?}/{category?}', function (
+    int    $id       = null,
+    string $category = null
+    ) {
+    return 
+        "Id: "       . $id
+        ."<br>".
+        "Category: " . $category;
+});
+/*
+If there is a second parameter, the first is required
+*/
