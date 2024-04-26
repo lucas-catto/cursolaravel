@@ -69,3 +69,16 @@ Route::get('/produto/{id?}/{category?}', function (
 /*
 If there is a second parameter, the first is required
 */
+
+// 11 Redirect e View:
+
+// Route::get('/sobre', function () {
+//     return redirect('/empresa');
+// });
+
+// OR
+
+// Route::redirect('/sobre', '/empresa');
+
+// Returning a View directly
+// Route::view('/website', 'website/website');
