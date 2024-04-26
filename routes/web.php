@@ -20,3 +20,26 @@ Route::get('/', function () {
 Route::get('/empresa', function () {
     return view('empresa/empresa');
 });
+
+/*
+Any:
+    => Get
+    => Post
+    => Put
+    => Patch
+    => Delete
+    => Options
+*/
+
+Route::any('/any', function () {
+    return "any: it's accepted all the HTTP verbs.";
+});
+
+/*
+Match:
+    => In first parameter, it need to be defined the HTTP verbs
+*/
+
+Route::match(['get', 'post'], '/match', function () {
+    return "match: it's accepted just the defined HTTP verbs.";
+});
