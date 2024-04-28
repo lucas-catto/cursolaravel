@@ -92,3 +92,169 @@ Route::get('news', function () {
 Route::get('lucas', function () {
     return redirect()->route('news_route');
 });
+
+// 13 Grupo de Rotas
+
+/*
+admin/
+admin/route_one
+admin/route_two
+admin/route_three
+*/
+
+// /admin/
+/*
+Route::prefix('admin')->group(function () {
+
+    // admin/
+    Route::get('/', function () {
+        return "Admin - home";
+    })->name('admin_home');
+
+    // admin/route_one
+    Route::get('route_one', function () {
+        return "route_one";
+    });
+
+    // admin/route_two
+    Route::get('route_two', function () {
+        return "route_two";
+    });
+
+    // admin/route_three
+    Route::get('route_three', function () {
+        return "route_three";
+    });
+
+    Route::fallback(function () {
+        return redirect()->route('admin_home');
+    });
+});
+*/
+
+// Group By Name:
+/*
+Route::name('admin_')->group(function () {
+
+    // admin/
+    Route::get('admin/', function () {
+        return "Admin - home";
+    })->name('home');
+
+    // admin/route_one
+    Route::get('admin/route_one', function () {
+        return "route_one";
+    })->name('one');
+
+    // admin/route_two
+    Route::get('admin/route_two', function () {
+        return "route_two";
+    })->name('two');
+
+    // admin/route_three
+    Route::get('admin/route_three', function () {
+        return "route_three";
+    })->name('three');
+});
+
+Route::get('/computer', function () {
+    return redirect()->route('admin_three');
+});
+*/
+
+// Only a Test:
+
+/*
+    admin/
+    admin/route_one
+    admin/route_two
+*/
+
+// Creating Routes:
+/*
+Route::name('admin.')->group(function () {
+
+    Route::prefix('/admin')->group(function () {
+        
+        Route::get('/', function () {
+            return "Admin - home";
+        })->name('home');
+        
+
+        Route::get('/route_one', function () {
+            return "route => one";
+        })->name('one');
+        
+        
+        Route::get('/route_two', function () {
+            return "route => two";
+        })->name('two');
+
+
+        Route::fallback(function () {
+            return redirect()->route('admin.home');
+        })->name('fallback');
+    });
+});
+*/
+
+// Testing Routes:
+/*
+Route::prefix('test_route')->group(function () {
+
+    Route::get('/', function () {
+        return redirect()->route('admin.home');
+    });
+
+    Route::get('/1', function () {
+        return redirect()->route('admin.one');
+    });
+
+    Route::get('/2', function () {
+        return redirect()->route('admin.two');
+    });
+
+    Route::fallback(function () {
+        return redirect()->route('admin.home');
+    });
+});
+*/
+
+// Group by "group":
+
+// Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {});
+
+Route::group([
+    'prefix' => 'school',
+    'as'     => 'school.'
+], function () {
+
+    Route::get('/', function () {
+        return "school => home";
+    })->name('home');
+
+    Route::get('/teacher', function () {
+        return "school => teacher";
+    })->name('teacher');
+
+    Route::get('student', function () {
+        return "school => student";
+    })->name('student');
+});
+
+// Test School Route:
+
+Route::prefix('test_school_route')->group(function () {
+
+    Route::get('/', function () {
+        return redirect()->route('school.home');
+    });
+
+    Route::get('/teacher', function () {
+        return redirect()->route('school.teacher');
+    });
+
+    Route::get('/student', function () {
+        return redirect()->route('school.student');
+    });
+});
