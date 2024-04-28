@@ -82,3 +82,13 @@ If there is a second parameter, the first is required
 
 // Returning a View directly
 // Route::view('/website', 'website/website');
+
+// 12 Rotas nomeadas:
+
+Route::get('news', function () {
+    return view('news/news');
+})->name('news_route');
+
+Route::get('lucas', function () {
+    return redirect()->route('news_route');
+});
