@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/empresa', function () {
-    return view('empresa/empresa');
-});
+// Route::get('/empresa', function () {
+//     return view('empresa/empresa');
+// });
 
 /*
 Any:
@@ -31,18 +31,18 @@ Any:
     => Options
 */
 
-Route::any('/any', function () {
-    return "any: it's accepted all the HTTP verbs.";
-});
+// Route::any('/any', function () {
+//     return "any: it's accepted all the HTTP verbs.";
+// });
 
 /*
 Match:
     => In first parameter, it need to be defined the HTTP verbs
 */
 
-Route::match(['get', 'post'], '/match', function () {
-    return "match: it's accepted just the defined HTTP verbs.";
-});
+// Route::match(['get', 'post'], '/match', function () {
+//     return "match: it's accepted just the defined HTTP verbs.";
+// });
 
 /*
 Passing parameters through the URL:
@@ -57,15 +57,15 @@ Passing parameters through the URL:
 // });
 
 // Optional parameter:
-Route::get('/produto/{id?}/{category?}', function (
-    int    $id       = null,
-    string $category = null
-    ) {
-    return 
-        "Id: "       . $id
-        ."<br>".
-        "Category: " . $category;
-});
+// Route::get('/produto/{id?}/{category?}', function (
+//     int    $id       = null,
+//     string $category = null
+//     ) {
+//     return 
+//         "Id: "       . $id
+//         ."<br>".
+//         "Category: " . $category;
+// });
 /*
 If there is a second parameter, the first is required
 */
@@ -85,13 +85,13 @@ If there is a second parameter, the first is required
 
 // 12 Rotas nomeadas:
 
-Route::get('news', function () {
-    return view('news/news');
-})->name('news_route');
+// Route::get('news', function () {
+//     return view('news/news');
+// })->name('news_route');
 
-Route::get('lucas', function () {
-    return redirect()->route('news_route');
-});
+// Route::get('lucas', function () {
+//     return redirect()->route('news_route');
+// });
 
 // 13 Grupo de Rotas
 
@@ -224,37 +224,37 @@ Route::prefix('test_route')->group(function () {
 
 // Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {});
 
-Route::group([
-    'prefix' => 'school',
-    'as'     => 'school.'
-], function () {
+// Route::group([
+//     'prefix' => 'school',
+//     'as'     => 'school.'
+// ], function () {
 
-    Route::get('/', function () {
-        return "school => home";
-    })->name('home');
+//     Route::get('/', function () {
+//         return "school => home";
+//     })->name('home');
 
-    Route::get('/teacher', function () {
-        return "school => teacher";
-    })->name('teacher');
+//     Route::get('/teacher', function () {
+//         return "school => teacher";
+//     })->name('teacher');
 
-    Route::get('student', function () {
-        return "school => student";
-    })->name('student');
-});
+//     Route::get('student', function () {
+//         return "school => student";
+//     })->name('student');
+// });
 
 // Test School Route:
 
-Route::prefix('test_school_route')->group(function () {
+// Route::prefix('test_school_route')->group(function () {
 
-    Route::get('/', function () {
-        return redirect()->route('school.home');
-    });
+//     Route::get('/', function () {
+//         return redirect()->route('school.home');
+//     });
 
-    Route::get('/teacher', function () {
-        return redirect()->route('school.teacher');
-    });
+//     Route::get('/teacher', function () {
+//         return redirect()->route('school.teacher');
+//     });
 
-    Route::get('/student', function () {
-        return redirect()->route('school.student');
-    });
-});
+//     Route::get('/student', function () {
+//         return redirect()->route('school.student');
+//     });
+// });
