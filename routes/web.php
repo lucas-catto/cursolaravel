@@ -258,3 +258,9 @@ Route::prefix('test_route')->group(function () {
 //         return redirect()->route('school.student');
 //     });
 // });
+
+// 14 Controllers:
+
+use App\Http\Controllers\HomeController;
+
+Route::get('/', [HomeController::class, 'index']);
