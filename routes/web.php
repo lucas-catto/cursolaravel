@@ -278,3 +278,10 @@ Route::prefix('test_route')->group(function () {
 use App\Http\Controllers\ProductController;
 
 Route::resource('products', ProductController::class);
+
+// 17 Route list, cache e clear:
+/*
+    php artisan route:list
+    php artisan route:cache
+    php artisan route:clear
+*/
