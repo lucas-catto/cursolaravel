@@ -268,3 +268,13 @@ Route::prefix('test_route')->group(function () {
 // 15 Passando Parâmetros Para o Controller:
 
 // Route::get('/home/{id?}', [HomeController::class, 'show']);
+
+// 16 Resource:
+
+/*
+    Create methods and routes
+*/
+
+use App\Http\Controllers\ProductController;
+
+Route::resource('products', ProductController::class);
