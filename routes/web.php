@@ -261,6 +261,10 @@ Route::prefix('test_route')->group(function () {
 
 // 14 Controllers:
 
-use App\Http\Controllers\HomeController;
+// use App\Http\Controllers\HomeController;
 
-Route::get('/', [HomeController::class, 'index']);
+// Route::get('/', [HomeController::class, 'index']);
+
+// 15 Passando Parâmetros Para o Controller:
+
+// Route::get('/home/{id?}', [HomeController::class, 'show']);
