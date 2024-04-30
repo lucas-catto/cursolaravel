@@ -287,3 +287,10 @@ Route::resource('products', ProductController::class);
 */
 
 // 18 Configurando o Banco de Dados: .env
+
+// 19 Entendendo os Migrations
+/*
+    php artisan migrate    
+    php artisan migrate:rollback
+    php artisan migrate:status  
+*/
