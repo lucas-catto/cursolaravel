@@ -285,3 +285,5 @@ Route::resource('products', ProductController::class);
     php artisan route:cache
     php artisan route:clear
 */
+
+// 18 Configurando o Banco de Dados: .env
