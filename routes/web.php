@@ -310,3 +310,18 @@ Route::resource('products', ProductController::class);
         x
     php artisan make:migration name --create=table_name
 */
+
+// 21 Editando e Excluindo tabelas:
+/*
+    php artisan migrate
+
+    Migration to update table name:
+    php artisan make:migration alterar_nome_tabela_produtos
+    php artisan migrate
+
+    php artisan migrate:status
+
+    Migratioin to delete a Table:
+    php artisan make:migration excluir_tabela_produto
+    php artisan migrate
+*/
