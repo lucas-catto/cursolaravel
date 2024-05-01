@@ -294,3 +294,19 @@ Route::resource('products', ProductController::class);
     php artisan migrate:rollback
     php artisan migrate:status  
 */
+
+// 20 Criando os Migrations:
+/*
+    php artisan make:migration create_name_table
+        x
+    php artisan make:migration name
+    
+    php artisan make:migration create_produtos_table
+    
+    php artisan make:migration name --create=table_name
+    php artisan make:migration produtos --create=produtos
+
+    php artisan make:migration create_name_table
+        x
+    php artisan make:migration name --create=table_name
+*/
