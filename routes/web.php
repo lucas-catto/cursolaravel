@@ -275,9 +275,9 @@ Route::prefix('test_route')->group(function () {
     Create methods and routes
 */
 
-use App\Http\Controllers\ProductController;
+// use App\Http\Controllers\ProductController;
 
-Route::resource('products', ProductController::class);
+// Route::resource('products', ProductController::class);
 
 // 17 Route list, cache e clear:
 /*
@@ -321,7 +321,23 @@ Route::resource('products', ProductController::class);
 
     php artisan migrate:status
 
-    Migratioin to delete a Table:
+    Migration to delete a Table:
     php artisan make:migration excluir_tabela_produto
     php artisan migrate
+*/
+
+// 22 Reset, Refresh e Fresh:
+/*
+    Status of migrations:
+    php artisan migrate:status
+
+    Something like a rollback in all migrations:
+    php artisan migrate:reset
+
+    Reset and execute again:
+    php artisan migrate:refresh
+
+    Delete all tables and execute again:
+    php artisan migrate:fresh
+
 */
