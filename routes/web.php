@@ -341,3 +341,17 @@ Route::prefix('test_route')->group(function () {
     php artisan migrate:fresh
 
 */
+
+// 23 Modificando Colunas:
+/*
+    Install package:
+    composer require doctrine/dbal
+
+    /config/database.php
+
+    php artisan migrate:fresh
+
+    php artisan make:migration update_produtos
+
+    php artisan migrate
+*/
