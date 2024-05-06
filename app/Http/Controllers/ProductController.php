@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Produto;
+
 class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        return "index";
+    public function index() {
+
+        $produtos = Produto::all();
+        return dd($produtos);
     }
 
     /**

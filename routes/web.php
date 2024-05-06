@@ -355,3 +355,12 @@ Route::prefix('test_route')->group(function () {
 
     php artisan migrate
 */
+
+// 24 Entendendo os Models:
+/*
+    php artisan make:model Produto
+*/
+
+use App\Http\Controllers\ProductController;
+
+Route::get('/', [ProductController::class, 'index']);
