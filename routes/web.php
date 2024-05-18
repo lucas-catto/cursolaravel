@@ -364,3 +364,24 @@ Route::prefix('test_route')->group(function () {
 use App\Http\Controllers\ProductController;
 
 Route::get('/', [ProductController::class, 'index']);
+
+// 25 Criando tabelas Users, Categorias e Produtos
+/*
+    Create Model + Migration:
+    php artisan make:model Categoria --migration
+
+    Create Model + Migration + Controller:
+    php artisan make:model Categoria --migration --controller
+    
+    or with resource:
+    php artisan make:model Categoria --migration --controller --resource
+
+    More Simple to Create Model + Migration + Controller (with resource):
+    php artisan make:model Categoria -m -cr
+
+    More more Simple to Create Model + Migration + Controller (with resource):
+    php artisan make:model Categoria -mcr
+
+    php artisan migrate:fresh
+        => everything is right
+*/
