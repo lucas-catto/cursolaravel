@@ -404,3 +404,10 @@ Route::get('/', [ProductController::class, 'index']);
 
     php artisan db:seed
 */
+
+// 28 mfscr
+/*
+    php artisan make:model Teste --migration --factory --seed --controller --resource
+    php artisan make:model Teste -m -f -s -cr
+    php artisan make:model Teste -mfscr
+*/
