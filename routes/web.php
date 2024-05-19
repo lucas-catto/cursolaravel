@@ -393,3 +393,14 @@ Route::get('/', [ProductController::class, 'index']);
     Execute Seeder:
     php artisan db:seed
 */
+
+// 27 Factory
+/*
+    php artisan make:factory CategoriaFactory
+
+    Seeder => execute => Factory
+
+    php artisan make:seeder CategoriasSeeder
+
+    php artisan db:seed
+*/
