@@ -25,6 +25,12 @@ class DatabaseSeeder extends Seeder
         ]);
         */
 
-        $this->call(CategoriasSeeder::class);
+        // $this->call(CategoriasSeeder::class);
+
+        $this->call([
+            // UsersSeeder::class,
+            CategoriasSeeder::class,
+            ProdutosSeeder::class
+        ]);
     }
 }

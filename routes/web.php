@@ -411,3 +411,10 @@ Route::get('/', [ProductController::class, 'index']);
     php artisan make:model Teste -m -f -s -cr
     php artisan make:model Teste -mfscr
 */
+
+// 29 Factory Produtos e StrSlug
+/*
+    php artisan make:factory ProdutoFactory
+
+    php artisan make:seeder ProdutosSeeder
+*/
