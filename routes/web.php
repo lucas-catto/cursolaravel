@@ -385,3 +385,11 @@ Route::get('/', [ProductController::class, 'index']);
     php artisan migrate:fresh
         => everything is right
 */
+
+// 26 Seeder
+/*
+    php artisan make:seeder UsersSeeder
+
+    Execute Seeder:
+    php artisan db:seed
+*/
