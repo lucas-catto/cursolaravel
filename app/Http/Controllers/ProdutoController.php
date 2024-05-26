@@ -6,15 +6,34 @@ use Illuminate\Http\Request;
 
 use App\Models\Produto;
 
-class ProductController extends Controller
+class ProdutoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index() {
 
-        $produtos = Produto::all();
-        return dd($produtos);
+        // $produtos = Produto::all();
+        // return dd($produtos);
+
+        // return view('news/news');
+
+        /*
+        $name = 'lucas';
+        $age  = 17;
+        $html = '<h1>html</h1>';
+
+        return view('empresa/empresa', [
+            'name' => $name,
+            'age'  => $age,
+            'html' => $html
+        ]);
+        */
+        $name = 'lucas';
+        $age  = 17;
+        $html = '<h1>ABCXYZ</h1>';
+
+        return view('empresa/empresa', compact('name', 'age', 'html'));
     }
 
     /**

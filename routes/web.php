@@ -424,3 +424,9 @@ Route::get('/', [ProductController::class, 'index']);
     php artisan make:migration contatos --create=contatos
     php artisan make:migration regras --create=regras
 */
+
+// 31 Introdução as views
+
+use App\Http\Controllers\ProdutoController;
+
+Route::get('/produtos', [ProdutoController::class, 'index']);
