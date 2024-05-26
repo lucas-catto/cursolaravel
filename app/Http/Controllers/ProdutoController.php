@@ -64,6 +64,8 @@ class ProdutoController extends Controller
     public function show(string $id)
     {
         return "show";
+        // Criando um Erro Interno (.env APP_DEBUG=true => false)
+        // if
     }
 
     /**
