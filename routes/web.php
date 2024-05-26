@@ -418,3 +418,9 @@ Route::get('/', [ProductController::class, 'index']);
 
     php artisan make:seeder ProdutosSeeder
 */
+
+// 30 Relacionamentos
+/*
+    php artisan make:migration contatos --create=contatos
+    php artisan make:migration regras --create=regras
+*/
