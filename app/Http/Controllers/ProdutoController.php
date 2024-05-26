@@ -36,7 +36,10 @@ class ProdutoController extends Controller
 
         return view('empresa/empresa', compact('name', 'age', 'html'));
         */
-        return view('empresa/home');
+
+        $name = 'lucas';
+
+        return view('empresa/home', compact('name'));
     }
 
     /**

@@ -438,3 +438,5 @@ Route::get('/produtos', [ProdutoController::class, 'index']);
     Laravel Blade Snippets
     Laravel Snippets
 */
+
+// 34 Comentários e Operador Ternário
