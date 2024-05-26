@@ -432,3 +432,9 @@ use App\Http\Controllers\ProdutoController;
 Route::get('/produtos', [ProdutoController::class, 'index']);
 
 // 32 Section, Yield e Extends
+
+// 33 Laravel Snippers
+/*
+    Laravel Blade Snippets
+    Laravel Snippets
+*/
