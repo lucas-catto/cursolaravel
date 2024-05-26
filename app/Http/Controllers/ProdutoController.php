@@ -29,11 +29,14 @@ class ProdutoController extends Controller
             'html' => $html
         ]);
         */
+        /*
         $name = 'lucas';
         $age  = 17;
         $html = '<h1>ABCXYZ</h1>';
 
         return view('empresa/empresa', compact('name', 'age', 'html'));
+        */
+        return view('empresa/home');
     }
 
     /**
