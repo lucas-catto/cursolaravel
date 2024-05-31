@@ -361,9 +361,9 @@ Route::prefix('test_route')->group(function () {
     php artisan make:model Produto
 */
 
-use App\Http\Controllers\ProductController;
+// use App\Http\Controllers\ProductController;
 
-Route::get('/', [ProductController::class, 'index']);
+// Route::get('/', [ProductController::class, 'index']);
 
 // 25 Criando tabelas Users, Categorias e Produtos
 /*
@@ -442,3 +442,5 @@ Route::get('/produtos', [ProdutoController::class, 'index']);
 // 34 Comentários e Operador Ternário
 
 // 35 Customizando views de erro
+
+// 36 Estruturas de controle
