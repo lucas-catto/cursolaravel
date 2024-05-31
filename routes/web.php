@@ -446,3 +446,5 @@ Route::get('/produtos', [ProdutoController::class, 'index']);
 // 36 Estruturas de controle
 
 // 37 Estruturas de repetição
+
+// 38 Include e Component

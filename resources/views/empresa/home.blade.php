@@ -13,19 +13,23 @@
 {{-- Definir valor padrão para uma variável --}}
 {{-- $test ?? 'default value' --}}
 
+{{--
 @if ($name == 'lucas')
     <p>{{ $name }}</p>
 @else
     <p>{{ 'false' }}</p>
 @endif
+--}}
 
 {{-- --}}
 
-@unless ($name == 'lucas[1]') {{-- false --}}
-    true
-@else
-    false
-@endunless
+{{-- @unless ($name == 'lucas[1]') --}} {{-- false --}}
+    {{-- true --}}
+{{-- @else --}}
+    {{-- false--}}
+{{-- @endunless--}}
+
+{{--
 
 @switch($age)
     @case(17)
@@ -81,5 +85,15 @@
     <p>No Result.</p>
     
 @endforelse
+
+--}}
+
+@include('includes/mensagem', ['title'=>'Laravel'])
+
+@component('components/sidebar')
+    @slot('text')
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus necessitatibus rerum adipisci deserunt ad ullam totam placeat saepe, voluptas alias. Nulla placeat quasi facilis possimus minima eos, iusto ipsa a.</p>
+    @endslot
+@endcomponent
 
 @endsection
