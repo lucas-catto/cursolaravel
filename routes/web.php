@@ -458,3 +458,5 @@ Route::get('/produtos', [ProdutoController::class, 'index']);
 */
 
 // 41 Implementando Materialize CSS
+
+// 42 Listagem de produtos na home

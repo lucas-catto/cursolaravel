@@ -37,12 +37,15 @@ class ProdutoController extends Controller
         return view('empresa/empresa', compact('name', 'age', 'html'));
         */
 
-        $name = 'lucas';
-        $age = 17; /* 16/17/18 */
-        $languages = ['php', 'python', 'c++', 'c', 'cobol', 'lisp'];
-        $search_results = []; // ['php', 'python', 'c++', 'c', 'cobol', 'lisp'];
+        // $name = 'lucas';
+        // $age = 17; /* 16/17/18 */
+        // $languages = ['php', 'python', 'c++', 'c', 'cobol', 'lisp'];
+        // $search_results = []; // ['php', 'python', 'c++', 'c', 'cobol', 'lisp'];
 
-        return view('empresa/home', compact('name', 'age', 'languages', 'search_results'));
+        // return view('empresa/home', compact('name', 'age', 'languages', 'search_results'));
+        
+        $produtos = Produto::all();
+        return view('empresa/home', compact('produtos'));
     }
 
     /**
