@@ -450,3 +450,9 @@ Route::get('/produtos', [ProdutoController::class, 'index']);
 // 38 Include e Component
 
 // 39 Stacks e Push
+
+// 40 Viewcache e Viewclear
+/*
+    php artisan view:cache
+    php artisan view:clear
+*/

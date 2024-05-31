@@ -6,11 +6,11 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Produtos | @yield('title')</title>
 
-        @stack('style')
+        {{-- @stack('style') --}}
     </head>
     <body>
         @yield('content')
 
-        @stack('script')
+        {{-- @stack('script') --}}
     </body>
 </html>
