@@ -5,8 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Produtos | @yield('title')</title>
+
+        @stack('style')
     </head>
     <body>
         @yield('content')
+
+        @stack('script')
     </body>
 </html>

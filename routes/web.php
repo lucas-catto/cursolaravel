@@ -448,3 +448,5 @@ Route::get('/produtos', [ProdutoController::class, 'index']);
 // 37 Estruturas de repetição
 
 // 38 Include e Component
+
+// 39 Stacks e Push
