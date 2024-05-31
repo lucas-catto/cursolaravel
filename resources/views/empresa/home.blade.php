@@ -57,4 +57,29 @@
     <p>Guest: true</p>
 @endguest
 
+<p>37 Estruturas de repetição</p>
+
+@for ($i = 0; $i <= 10; $i++)
+    <p>For: {{ $i }}</p>
+@endfor
+
+@php $i = 0; @endphp
+
+@while ($i <= 17)
+    <p>While: {{ $i }}</p>
+    
+    @php $i++ @endphp
+@endwhile
+
+@foreach ($languages as $language)
+    <p>[{{ array_search($language, $languages) }}] => {{ $language }}</p>
+@endforeach
+
+@forelse ($search_results as $search_result)
+    {{ $search_result }}
+@empty
+    <p>No Result.</p>
+    
+@endforelse
+
 @endsection
