@@ -456,3 +456,5 @@ Route::get('/produtos', [ProdutoController::class, 'index']);
     php artisan view:cache
     php artisan view:clear
 */
+
+// 41 Implementando Materialize CSS
